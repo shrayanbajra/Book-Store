@@ -11,4 +11,5 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="catalog">Catalog</string>
     <string name="search_for_title_or_author">Search for title or author</string>
+    <string name="search_icon">Search Icon</string>
 </resources>

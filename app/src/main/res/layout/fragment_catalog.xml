@@ -25,22 +25,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_search_catalog"
+        style="@style/Custom.TextInputLayout.Rounded.Corners"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        app:boxCornerRadiusBottomEnd="16dp"
-        app:boxCornerRadiusBottomStart="16dp"
-        app:boxCornerRadiusTopEnd="16dp"
-        app:boxCornerRadiusTopStart="16dp"
-        app:boxStrokeColor="@color/black"
-        app:boxStrokeWidth="1dp"
-        app:endIconDrawable="@drawable/ic_search"
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_min="44sp"
+        app:layout_constraintHeight_min="44dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_title_catalog">
 
@@ -48,8 +43,28 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/search_for_title_or_author"
-            app:backgroundTint="@android:color/transparent" />
+            android:paddingStart="16dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="10dp"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            app:backgroundTint="@android:color/transparent"
+            app:lineHeight="24sp" />
+        <!--TODO: Add style for hint text-->
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/iv_search_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/search_icon"
+        android:maxWidth="16dp"
+        android:src="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="@id/til_search_catalog"
+        app:layout_constraintEnd_toEndOf="@id/til_search_catalog"
+        app:layout_constraintTop_toTopOf="@id/til_search_catalog" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
