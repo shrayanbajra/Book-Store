@@ -19,14 +19,48 @@
     <style name="textStyleH1">
         <item name="fontFamily">@font/libre_caslon_bold</item>
         <item name="android:textSize">34sp</item>
-        <item name="lineHeight">42sp</item>
         <item name="android:letterSpacing">0.02</item>
     </style>
 
     <style name="textStyleH2">
         <item name="fontFamily">@font/libre_caslon_bold</item>
         <item name="android:textSize">18sp</item>
-        <item name="lineHeight">24sp</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="textStyleH3">
+        <item name="fontFamily">@font/proza_libre_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="textStyleBody">
+        <item name="fontFamily">@font/proza_libre_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.00</item>
+    </style>
+
+    <style name="textStyleByline">
+        <item name="fontFamily">@font/proza_libre_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.00</item>
+    </style>
+
+    <style name="textStyleLink">
+        <item name="fontFamily">@font/proza_libre_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.00</item>
+    </style>
+
+    <style name="textStylePrice">
+        <item name="fontFamily">@font/lato_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.00</item>
+    </style>
+
+    <style name="textStyleButton">
+        <item name="fontFamily">@font/proza_libre_medium</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:letterSpacing">0.02</item>
     </style>
 

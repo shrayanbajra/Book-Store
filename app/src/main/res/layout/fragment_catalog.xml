@@ -41,7 +41,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/proza_libre_regular"
+            style="@style/textStyleH3"
             android:gravity="center_vertical"
             android:hint="@string/search_for_title_or_author"
             android:minHeight="44dp"
@@ -50,7 +50,6 @@
             android:paddingEnd="32dp"
             android:paddingBottom="10dp"
             android:textColorHint="@color/black"
-            android:textSize="14sp"
             app:backgroundTint="@android:color/transparent" />
         <!--TODO: Add style for hint text-->
 
