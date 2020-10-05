@@ -41,12 +41,12 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/proza_libre_regular"
             android:gravity="center_vertical"
             android:hint="@string/search_for_title_or_author"
             android:minHeight="44dp"
             android:paddingStart="16dp"
             android:paddingTop="10dp"
-
             android:paddingEnd="32dp"
             android:paddingBottom="10dp"
             android:textColorHint="@color/black"
