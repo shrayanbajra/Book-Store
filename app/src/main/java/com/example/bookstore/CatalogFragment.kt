@@ -38,7 +38,13 @@ class CatalogFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        val genres = listOf("Action", "Biography", "Cookbook")
+        val genres = getGenres()
         rvGenresAdapter.setGenres(genres)
+    }
+
+    private fun getGenres(): List<Genre> {
+        val action = Genre(imageResource = R.drawable.ic_car_crash, title = "Action")
+        val biography = Genre(imageResource = R.drawable.ic_vaadin_glasses, title = "Biography")
+        return listOf(action, biography)
     }
 }

@@ -3,14 +3,15 @@ package com.example.bookstore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class GenreAdapter : RecyclerView.Adapter<GenreAdapter.GenreViewHolder>() {
 
-    private val genres = arrayListOf<String>()
+    private val genres = arrayListOf<Genre>()
 
-    fun setGenres(genres: List<String>) {
+    fun setGenres(genres: List<Genre>) {
         this.genres.clear()
         this.genres.addAll(genres)
         notifyDataSetChanged()
@@ -33,10 +34,12 @@ class GenreAdapter : RecyclerView.Adapter<GenreAdapter.GenreViewHolder>() {
 
     class GenreViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
+        private val tvGenreIcon: ImageView = itemView.findViewById(R.id.iv_genre_icon)
         private val tvGenreTitle: TextView = itemView.findViewById(R.id.tv_genre_title)
 
-        fun bind(currentGenre: String) {
-            tvGenreTitle.text = currentGenre
+        fun bind(currentGenre: Genre) {
+            tvGenreIcon.setImageResource(currentGenre.imageResource)
+            tvGenreTitle.text = currentGenre.title
         }
 
     }
