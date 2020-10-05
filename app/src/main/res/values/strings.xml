@@ -12,4 +12,5 @@
     <string name="catalog">Catalog</string>
     <string name="search_for_title_or_author">Search for title or author</string>
     <string name="search_icon">Search Icon</string>
+    <string name="genres">Genres</string>
 </resources>
