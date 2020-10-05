@@ -10,4 +10,5 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="catalog">Catalog</string>
+    <string name="search_for_title_or_author">Search for title or author</string>
 </resources>

@@ -16,10 +16,18 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="large_title">
+    <style name="textStyleH1">
+        <item name="fontFamily">@font/libre_caslon_bold</item>
         <item name="android:textSize">34sp</item>
+        <item name="lineHeight">42sp</item>
         <item name="android:letterSpacing">0.02</item>
-        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="textStyleH2">
+        <item name="fontFamily">@font/libre_caslon_bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:letterSpacing">0.02</item>
     </style>
 
 </resources>
