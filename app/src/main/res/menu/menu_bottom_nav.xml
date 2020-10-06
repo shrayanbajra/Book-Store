@@ -9,4 +9,8 @@
         android:id="@+id/catalogFragment"
         android:title="@string/catalog" />
 
+    <item
+        android:id="@+id/myLibraryFragment"
+        android:title="@string/my_library" />
+
 </menu>
