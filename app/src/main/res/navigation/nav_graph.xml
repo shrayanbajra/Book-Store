@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/catalogFragment"
-        android:name="com.example.bookstore.CatalogFragment"
+        android:name="com.example.bookstore.ui.catalog.CatalogFragment"
         android:label="@string/catalog"
         tools:layout="@layout/fragment_catalog" />
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.bookstore.HomeFragment"
+        android:name="com.example.bookstore.ui.home.HomeFragment"
         android:label="@string/home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/myLibraryFragment"
-        android:name="com.example.bookstore.MyLibraryFragment"
+        android:name="com.example.bookstore.ui.MyLibraryFragment"
         android:label="@string/my_library"
         tools:layout="@layout/fragment_my_library" />
 

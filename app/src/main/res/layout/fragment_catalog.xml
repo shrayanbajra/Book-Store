@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:alpha="0.85"
     android:background="@color/white"
-    tools:context=".CatalogFragment">
+    tools:context=".ui.catalog.CatalogFragment">
 
     <TextView
         android:id="@+id/tv_title_catalog"

@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".ui.home.HomeFragment">
 
     <ImageView
+        android:id="@+id/iv_background_image"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/background_image_in_home"
         android:scaleType="fitXY"
         android:src="@drawable/bg_rectangle"
         app:layout_constraintBottom_toBottomOf="@id/tv_most_popular_book_title"

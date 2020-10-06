@@ -1,4 +1,4 @@
-package com.example.bookstore
+package com.example.bookstore.ui.catalog
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.bookstore.Genre
+import com.example.bookstore.R
 
 class GenreAdapter : RecyclerView.Adapter<GenreAdapter.GenreViewHolder>() {
 
