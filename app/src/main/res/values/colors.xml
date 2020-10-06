@@ -19,5 +19,6 @@
 
     <!--White-->
     <color name="white">#ffffff</color>
+    <color name="white_alpha_25">#40FFFFFF</color>
 
 </resources>

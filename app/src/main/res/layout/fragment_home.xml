@@ -1,13 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/home" />
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_rectangle"
+        app:layout_constraintBottom_toBottomOf="@id/tv_most_popular_book_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tv_title_home"
+        style="@style/textStyleH1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="56dp"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:text="@string/book_store"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_search_books"
+        style="@style/Custom.TextInputLayout.Rounded.Corners"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:boxBackgroundColor="@color/white_alpha_25"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_home">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/textStyleBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="@string/search_for_books"
+            android:minHeight="44dp"
+            android:paddingStart="16dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="32dp"
+            android:paddingBottom="10dp"
+            android:textColorHint="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/iv_search_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/search_icon"
+        android:maxWidth="16dp"
+        android:src="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="@id/til_search_books"
+        app:layout_constraintEnd_toEndOf="@id/til_search_books"
+        app:layout_constraintTop_toTopOf="@id/til_search_books" />
+
+    <TextView
+        android:id="@+id/tv_most_popular"
+        style="@style/textStyleH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/most_popular"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/til_search_books"
+        app:layout_constraintTop_toBottomOf="@id/til_search_books" />
+
+    <TextView
+        android:id="@+id/tv_see_all"
+        style="@style/textStyleLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/see_all"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tv_most_popular"
+        app:layout_constraintEnd_toEndOf="@id/til_search_books"
+        app:layout_constraintTop_toTopOf="@id/tv_most_popular" />
+
+    <ImageView
+        android:id="@+id/iv_most_popular_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/most_popular_book_cover"
+        android:maxWidth="104dp"
+        android:maxHeight="181dp"
+        android:src="@drawable/img_most_popular_book"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_most_popular" />
+
+    <TextView
+        android:id="@+id/tv_most_popular_book_author"
+        style="@style/textStyleH3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="2sp"
+        android:minHeight="24dp"
+        android:text="@string/christy_lefteri"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/iv_most_popular_book"
+        app:layout_constraintTop_toTopOf="@id/iv_most_popular_book" />
+
+    <TextView
+        android:id="@+id/tv_most_popular_book_title"
+        style="@style/textStyleH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2sp"
+        android:maxWidth="175dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="@string/the_beekeeper_of_aleppo"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/tv_most_popular_book_author"
+        app:layout_constraintTop_toBottomOf="@id/tv_most_popular_book_author" />
+
+    <TextView
+        android:id="@+id/tv_book_genre"
+        style="@style/textStyleBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="5sp"
+        android:minHeight="24dp"
+        android:text="@string/literary_fiction"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/tv_most_popular_book_author"
+        app:layout_constraintTop_toBottomOf="@id/tv_most_popular_book_title" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/ch_most_popular_book_price"
+        style="@style/textStylePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_marginTop="2dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="7sp"
+        android:text="@string/dollar_14_69"
+        android:textColor="@color/white"
+        app:chipBackgroundColor="@color/black"
+        app:chipCornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="@id/tv_most_popular_book_author"
+        app:layout_constraintTop_toBottomOf="@id/tv_book_genre" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

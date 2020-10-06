@@ -53,7 +53,6 @@
             android:paddingBottom="10dp"
             android:textColorHint="@color/black"
             app:backgroundTint="@android:color/transparent" />
-        <!--TODO: Add style for hint text-->
 
     </com.google.android.material.textfield.TextInputLayout>
 
