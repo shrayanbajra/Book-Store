@@ -3,11 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/catalogFragment"
         android:name="com.example.bookstore.CatalogFragment"
-        android:label="@string/first_fragment_label"
+        android:label="@string/catalog"
         tools:layout="@layout/fragment_catalog" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.bookstore.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" />
 </navigation>
