@@ -14,4 +14,5 @@
     <string name="search_icon">Search Icon</string>
     <string name="genres">Genres</string>
     <string name="genre_icon">Genre Icon</string>
+    <string name="home">Home</string>
 </resources>
