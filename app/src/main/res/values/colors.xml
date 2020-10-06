@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">@color/cyan_500</color>
+    <color name="colorPrimaryLight">@color/cyan_a100</color>
+    <color name="colorPrimaryDark">@color/cyan_700</color>
+    <color name="colorAccent">@color/deep_orange_500</color>
 
+    <!--Black-->
     <color name="black">#000000</color>
+
+    <!--Cyan-->
+    <color name="cyan_a100">#62EFFF</color>
+    <color name="cyan_500">#00BCD4</color>
+    <color name="cyan_700">#008BA3</color>
+
+    <!--Deep Orange-->
+    <color name="deep_orange_300">#FF7262</color>
+    <color name="deep_orange_500">#FF5722</color>
+
+    <!--White-->
     <color name="white">#ffffff</color>
+
 </resources>

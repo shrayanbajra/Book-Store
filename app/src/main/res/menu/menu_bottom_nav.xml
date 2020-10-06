@@ -3,14 +3,17 @@
 
     <item
         android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
         android:title="@string/home" />
 
     <item
         android:id="@+id/catalogFragment"
+        android:icon="@drawable/ic_catalog"
         android:title="@string/catalog" />
 
     <item
         android:id="@+id/myLibraryFragment"
+        android:icon="@drawable/ic_my_library"
         android:title="@string/my_library" />
 
 </menu>
