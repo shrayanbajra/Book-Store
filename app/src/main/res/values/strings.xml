@@ -36,5 +36,6 @@
     <string name="literary_fiction">Literary fiction</string>
     <string name="psychological_fiction">Psychological Fiction</string>
     <string name="biography">Biography</string>
+    <string name="newest_and_trending"><![CDATA[Newest & Trending]]></string>
 
 </resources>

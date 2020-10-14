@@ -14,6 +14,8 @@ class HomeFragment : Fragment() {
     private lateinit var rvMostPopularBooks: RecyclerView
     private val mostPopularBooksAdapter = MostPopularBooksAdapter()
 
+    private lateinit var rvNewestAndTrendingBooks: RecyclerView
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,6 +27,9 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initRvMostPopularBooks(view)
+        rvNewestAndTrendingBooks = view.findViewById(R.id.rv_newest_and_trending_books)
+        rvNewestAndTrendingBooks.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
     }
 
