@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Book Store</string>
     <string name="action_settings">Settings</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="next">Next</string>
     <string name="previous">Previous</string>
@@ -19,9 +20,21 @@
     <string name="most_popular">Most popular</string>
     <string name="see_all">See all</string>
     <string name="most_popular_book_cover">Most popular book cover</string>
+
+    <!--Dummy Values-->
     <string name="christy_lefteri">Christy Lefteri</string>
     <string name="the_beekeeper_of_aleppo">The Beekeeper of Aleppo</string>
-    <string name="literary_fiction">Literary fiction</string>
-    <string name="dollar_14_69">$14.69</string>
+    <string name="normal_people">Normal People</string>
+    <string name="sally_rooney">Sally Rooney</string>
+    <string name="becoming">Becoming</string>
+    <string name="michelle_obama">Michelle Obama</string>
+
     <string name="background_image_in_home">Background image in Home</string>
+    <string name="dollar_14_69">$14.69</string>
+
+    <!--Genre-->
+    <string name="literary_fiction">Literary fiction</string>
+    <string name="psychological_fiction">Psychological Fiction</string>
+    <string name="biography">Biography</string>
+
 </resources>

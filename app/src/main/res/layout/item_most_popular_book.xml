@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:paddingStart="32dp"
+    android:paddingEnd="8dp">
 
     <ImageView
         android:id="@+id/iv_cover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:contentDescription="@string/most_popular_book_cover"
         android:maxWidth="104dp"
         android:maxHeight="181dp"
@@ -28,6 +29,8 @@
         android:minHeight="24dp"
         android:textAllCaps="true"
         android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.00"
         app:layout_constraintStart_toEndOf="@id/iv_cover"
         app:layout_constraintTop_toTopOf="@id/iv_cover"
         tools:text="@string/christy_lefteri" />
@@ -42,6 +45,8 @@
         android:paddingTop="4dp"
         android:paddingBottom="4dp"
         android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.00"
         app:layout_constraintStart_toStartOf="@id/tv_author"
         app:layout_constraintTop_toBottomOf="@id/tv_author"
         tools:text="@string/the_beekeeper_of_aleppo" />
@@ -56,6 +61,8 @@
         android:lineSpacingExtra="5sp"
         android:minHeight="24dp"
         android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.00"
         app:layout_constraintStart_toStartOf="@id/tv_author"
         app:layout_constraintTop_toBottomOf="@id/tv_title"
         tools:text="@string/literary_fiction" />
@@ -71,6 +78,8 @@
         android:textColor="@color/white"
         app:chipBackgroundColor="@color/black"
         app:chipCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.00"
         app:layout_constraintStart_toStartOf="@id/tv_author"
         app:layout_constraintTop_toBottomOf="@id/tv_genre"
         tools:text="@string/dollar_14_69" />
