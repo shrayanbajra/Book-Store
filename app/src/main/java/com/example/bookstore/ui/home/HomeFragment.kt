@@ -30,7 +30,8 @@ class HomeFragment : Fragment() {
 
     private fun initRvMostPopularBooks(view: View) {
         rvMostPopularBooks = view.findViewById(R.id.rv_most_popular_books)
-        rvMostPopularBooks.layoutManager = LinearLayoutManager(context)
+        rvMostPopularBooks.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         rvMostPopularBooks.adapter = mostPopularBooksAdapter
     }
 
@@ -38,7 +39,7 @@ class HomeFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         val book1 = Book(
-            cover = R.drawable.img_most_popular_book,
+            cover = R.drawable.img_most_popular_book_1,
             title = getString(R.string.the_beekeeper_of_aleppo),
             author = getString(R.string.christy_lefteri),
             genre = getString(R.string.literary_fiction),

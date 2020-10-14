@@ -15,7 +15,7 @@
         android:maxHeight="181dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/img_most_popular_book" />
+        tools:src="@drawable/img_most_popular_book_1" />
 
     <TextView
         android:id="@+id/tv_author"

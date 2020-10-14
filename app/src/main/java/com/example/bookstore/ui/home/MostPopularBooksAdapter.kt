@@ -51,7 +51,8 @@ class MostPopularBooksAdapter :
             tvAuthor.text = currentBook.author
             tvTitle.text = currentBook.title
             tvGenre.text = currentBook.genre
-            tvPrice.text = currentBook.price.toString()
+            val price = "$ ${currentBook.price}"
+            tvPrice.text = price
 
         }
 
