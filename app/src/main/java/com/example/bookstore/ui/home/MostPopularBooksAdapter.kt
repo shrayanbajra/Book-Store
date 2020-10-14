@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookstore.R
+import com.example.bookstore.utils.CurrencyUtils
 import com.google.android.material.chip.Chip
 
 class MostPopularBooksAdapter :
@@ -51,7 +52,7 @@ class MostPopularBooksAdapter :
             tvAuthor.text = currentBook.author
             tvTitle.text = currentBook.title
             tvGenre.text = currentBook.genre
-            val price = "$ ${currentBook.price}"
+            val price = CurrencyUtils.formatUsingUsCurrencySystem(currentBook.price)
             tvPrice.text = price
 
         }
