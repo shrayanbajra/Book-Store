@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:contentDescription="@string/most_popular_book_cover"
+        android:maxWidth="104dp"
+        android:maxHeight="181dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/img_most_popular_book" />
+
+    <TextView
+        android:id="@+id/tv_author"
+        style="@style/textStyleH3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="2sp"
+        android:minHeight="24dp"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/iv_cover"
+        app:layout_constraintTop_toTopOf="@id/iv_cover"
+        tools:text="@string/christy_lefteri" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/textStyleH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2sp"
+        android:maxWidth="175dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/tv_author"
+        app:layout_constraintTop_toBottomOf="@id/tv_author"
+        tools:text="@string/the_beekeeper_of_aleppo" />
+
+    <TextView
+        android:id="@+id/tv_genre"
+        style="@style/textStyleBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="5sp"
+        android:minHeight="24dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/tv_author"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:text="@string/literary_fiction" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/tv_price"
+        style="@style/textStylePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_marginTop="2dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="7sp"
+        android:textColor="@color/white"
+        app:chipBackgroundColor="@color/black"
+        app:chipCornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="@id/tv_author"
+        app:layout_constraintTop_toBottomOf="@id/tv_genre"
+        tools:text="@string/dollar_14_69" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
