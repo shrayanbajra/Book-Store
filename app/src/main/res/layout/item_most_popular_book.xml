@@ -9,11 +9,10 @@
 
     <ImageView
         android:id="@+id/iv_cover"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="104dp"
+        android:layout_height="160dp"
         android:contentDescription="@string/most_popular_book_cover"
-        android:maxWidth="104dp"
-        android:maxHeight="181dp"
+        android:scaleType="fitEnd"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/img_most_popular_book_1" />

@@ -70,8 +70,8 @@ class HomeFragment : Fragment() {
         val newBooks = getNewestAndTrendingBooks()
         newestAndTrendingBooksAdapter.setBooks(newBooks)
 
-        val comingSoonBooks = getNewestAndTrendingBooks()
-        comingSoonBooksAdapter.setBooks(newBooks)
+        val comingSoonBooks = getComingSoonBooks()
+        comingSoonBooksAdapter.setBooks(comingSoonBooks)
 
     }
 
@@ -126,6 +126,34 @@ class HomeFragment : Fragment() {
             cover = R.drawable.img_newest_and_trending_book_4,
             title = getString(R.string.the_silent_ones),
             price = 7.98,
+        )
+        return listOf(book1, book2, book3, book4)
+    }
+
+
+    private fun getComingSoonBooks(): List<Book> {
+        val book1 = Book(
+            cover = R.drawable.img_coming_soon_book_1,
+            title = getString(R.string.super_attractor),
+            price = 10.20
+        )
+
+        val book2 = Book(
+            cover = R.drawable.img_coming_soon_book_2,
+            title = getString(R.string.how_to),
+            price = 10.50,
+        )
+
+        val book3 = Book(
+            cover = R.drawable.img_coming_soon_book_3,
+            title = getString(R.string.a_better_man),
+            price = 7.00,
+        )
+
+        val book4 = Book(
+            cover = R.drawable.img_coming_soon_book_4,
+            title = getString(R.string.permanent_recors),
+            price = 19.0,
         )
         return listOf(book1, book2, book3, book4)
     }
