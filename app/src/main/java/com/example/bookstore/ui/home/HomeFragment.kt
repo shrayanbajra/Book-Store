@@ -8,8 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookstore.R
+import com.example.bookstore.data.Article
 import com.example.bookstore.data.Book
 import com.example.bookstore.ui.home.adapters.ComingSoonBooksAdapter
+import com.example.bookstore.ui.home.adapters.MoreArticlesAdapter
 import com.example.bookstore.ui.home.adapters.MostPopularBooksAdapter
 import com.example.bookstore.ui.home.adapters.NewestAndTrendingBooksAdapter
 
@@ -24,6 +26,10 @@ class HomeFragment : Fragment() {
     private lateinit var rvComingSoonBooks: RecyclerView
     private val comingSoonBooksAdapter = ComingSoonBooksAdapter()
 
+    private lateinit var rvMoreArticles: RecyclerView
+    private val moreArticlesAdapter = MoreArticlesAdapter()
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -37,6 +43,7 @@ class HomeFragment : Fragment() {
         initRvMostPopularBooks(view)
         initRvNewestAndTrendingBooks(view)
         initRvComingSoonBooks(view)
+        initRvMoreArticles(view)
 
     }
 
@@ -61,6 +68,13 @@ class HomeFragment : Fragment() {
         rvComingSoonBooks.adapter = comingSoonBooksAdapter
     }
 
+    private fun initRvMoreArticles(view: View) {
+        rvMoreArticles = view.findViewById(R.id.rv_more_articles)
+        rvMoreArticles.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        rvMoreArticles.adapter = moreArticlesAdapter
+    }
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
@@ -72,6 +86,9 @@ class HomeFragment : Fragment() {
 
         val comingSoonBooks = getComingSoonBooks()
         comingSoonBooksAdapter.setBooks(comingSoonBooks)
+
+        val articles = getMoreArticles()
+        moreArticlesAdapter.setArticles(articles)
 
     }
 
@@ -141,21 +158,34 @@ class HomeFragment : Fragment() {
         val book2 = Book(
             cover = R.drawable.img_coming_soon_book_2,
             title = getString(R.string.how_to),
-            price = 10.50,
+            price = 10.50
         )
 
         val book3 = Book(
             cover = R.drawable.img_coming_soon_book_3,
             title = getString(R.string.a_better_man),
-            price = 7.00,
+            price = 7.00
         )
 
         val book4 = Book(
             cover = R.drawable.img_coming_soon_book_4,
             title = getString(R.string.permanent_recors),
-            price = 19.0,
+            price = 19.0
         )
         return listOf(book1, book2, book3, book4)
+    }
+
+    private fun getMoreArticles(): List<Article> {
+        val article1 = Article(
+            image = R.drawable.img_article_1,
+            title = getString(R.string.weekly_free_books)
+        )
+
+        val article2 = Article(
+            image = R.drawable.img_article_2,
+            title = getString(R.string.top_romantic_novels)
+        )
+        return listOf(article1, article2)
     }
 
 }
