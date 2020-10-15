@@ -15,6 +15,7 @@ class HomeFragment : Fragment() {
     private val mostPopularBooksAdapter = MostPopularBooksAdapter()
 
     private lateinit var rvNewestAndTrendingBooks: RecyclerView
+    private val newestAndTrendingBooksAdapter = NewestAndTrendingBooksAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,9 +28,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initRvMostPopularBooks(view)
-        rvNewestAndTrendingBooks = view.findViewById(R.id.rv_newest_and_trending_books)
-        rvNewestAndTrendingBooks.layoutManager =
-            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        initRvNewestAndTrendingBooks(view)
 
     }
 
@@ -40,14 +39,22 @@ class HomeFragment : Fragment() {
         rvMostPopularBooks.adapter = mostPopularBooksAdapter
     }
 
+    private fun initRvNewestAndTrendingBooks(view: View) {
+        rvNewestAndTrendingBooks = view.findViewById(R.id.rv_newest_and_trending_books)
+        rvNewestAndTrendingBooks.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        rvNewestAndTrendingBooks.adapter = newestAndTrendingBooksAdapter
+    }
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        val books = getBooks()
+        val books = getMostPopularBooks()
         mostPopularBooksAdapter.setBooks(books)
+        newestAndTrendingBooksAdapter.setBooks(books)
     }
 
-    private fun getBooks(): List<Book> {
+    private fun getMostPopularBooks(): List<Book> {
         val book1 = Book(
             cover = R.drawable.img_most_popular_book_1,
             title = getString(R.string.the_beekeeper_of_aleppo),

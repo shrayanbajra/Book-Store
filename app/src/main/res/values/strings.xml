@@ -37,5 +37,7 @@
     <string name="psychological_fiction">Psychological Fiction</string>
     <string name="biography">Biography</string>
     <string name="newest_and_trending"><![CDATA[Newest & Trending]]></string>
+    <string name="newest_and_trending_book_cover">Newest and Trending Book Cover</string>
+    <string name="a_fire_sparkling">A Fire Sparkling</string>
 
 </resources>

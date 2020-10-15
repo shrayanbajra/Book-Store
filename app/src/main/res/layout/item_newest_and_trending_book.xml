@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/newest_and_trending_book_cover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/img_newest_and_trending_book_1" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/textStyleByline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/iv_cover"
+        app:layout_constraintStart_toStartOf="@id/iv_cover"
+        app:layout_constraintTop_toBottomOf="@id/iv_cover"
+        tools:text="@string/a_fire_sparkling" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/ch_price"
+        style="@style/textStylePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="7sp"
+        android:textColor="@color/white"
+        app:chipBackgroundColor="@color/black"
+        app:chipCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="@id/iv_cover"
+        app:layout_constraintHorizontal_bias="0.00"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:text="@string/dollar_14_69" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
