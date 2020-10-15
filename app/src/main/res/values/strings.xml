@@ -6,6 +6,11 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <!--Genre-->
+    <string name="literary_fiction">Literary fiction</string>
+    <string name="psychological_fiction">Psychological Fiction</string>
+    <string name="biography">Biography</string>
+
     <string name="catalog">Catalog</string>
     <string name="search_for_title_or_author">Search for title or author</string>
     <string name="search_icon">Search Icon</string>
@@ -20,6 +25,9 @@
     <string name="most_popular">Most popular</string>
     <string name="see_all">See all</string>
     <string name="most_popular_book_cover">Most popular book cover</string>
+    <string name="background_image_in_home">Background image in Home</string>
+    <string name="newest_and_trending"><![CDATA[Newest & Trending]]></string>
+    <string name="newest_and_trending_book_cover">Newest and Trending Book Cover</string>
 
     <!--Dummy Values-->
     <string name="christy_lefteri">Christy Lefteri</string>
@@ -28,16 +36,10 @@
     <string name="sally_rooney">Sally Rooney</string>
     <string name="becoming">Becoming</string>
     <string name="michelle_obama">Michelle Obama</string>
-
-    <string name="background_image_in_home">Background image in Home</string>
     <string name="dollar_14_69">$14.69</string>
-
-    <!--Genre-->
-    <string name="literary_fiction">Literary fiction</string>
-    <string name="psychological_fiction">Psychological Fiction</string>
-    <string name="biography">Biography</string>
-    <string name="newest_and_trending"><![CDATA[Newest & Trending]]></string>
-    <string name="newest_and_trending_book_cover">Newest and Trending Book Cover</string>
     <string name="a_fire_sparkling">A Fire Sparkling</string>
+    <string name="the_man_with_no_borders">The Man with no borders</string>
+    <string name="relative_fortunes">Relative Fortunes</string>
+    <string name="the_silent_ones">The Silent Ones</string>
 
 </resources>

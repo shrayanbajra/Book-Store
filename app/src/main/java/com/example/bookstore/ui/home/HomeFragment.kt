@@ -49,9 +49,12 @@ class HomeFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        val books = getMostPopularBooks()
-        mostPopularBooksAdapter.setBooks(books)
-        newestAndTrendingBooksAdapter.setBooks(books)
+        val popularBooks = getMostPopularBooks()
+        mostPopularBooksAdapter.setBooks(popularBooks)
+
+        val newBooks = getNewestAndTrendingBooks()
+        newestAndTrendingBooksAdapter.setBooks(newBooks)
+
     }
 
     private fun getMostPopularBooks(): List<Book> {
@@ -79,6 +82,34 @@ class HomeFragment : Fragment() {
             price = 18.20,
         )
         return listOf(book1, book2, book3)
+    }
+
+
+    private fun getNewestAndTrendingBooks(): List<Book> {
+        val book1 = Book(
+            cover = R.drawable.img_newest_and_trending_book_1,
+            title = getString(R.string.a_fire_sparkling),
+            price = 12.20
+        )
+
+        val book2 = Book(
+            cover = R.drawable.img_newest_and_trending_book_2,
+            title = getString(R.string.the_man_with_no_borders),
+            price = 10.09,
+        )
+
+        val book3 = Book(
+            cover = R.drawable.img_newest_and_trending_book_3,
+            title = getString(R.string.relative_fortunes),
+            price = 9.00,
+        )
+
+        val book4 = Book(
+            cover = R.drawable.img_newest_and_trending_book_4,
+            title = getString(R.string.the_silent_ones),
+            price = 7.98,
+        )
+        return listOf(book1, book2, book3, book4)
     }
 
 }
