@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.bookstore.Genre
 import com.example.bookstore.R
+import com.example.bookstore.data.Genre
 
 class CatalogFragment : Fragment() {
 

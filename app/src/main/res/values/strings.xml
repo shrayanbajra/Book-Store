@@ -51,5 +51,11 @@
     <string name="weekly_free_books">Weekly free books</string>
     <string name="image_of_article">Image of article</string>
     <string name="top_romantic_novels">Top romantic novels</string>
+    <string name="now_reading">Now reading</string>
+    <string name="vladimir_nabokov">Vladimir Nabokov</string>
+    <string name="lolita">Lolita</string>
+    <string name="milkman">Milkman</string>
+    <string name="anna_burns">Anna Burns</string>
+    <string name="novel">Novel</string>
 
 </resources>

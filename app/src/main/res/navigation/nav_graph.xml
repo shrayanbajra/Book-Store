@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/myLibraryFragment"
-        android:name="com.example.bookstore.ui.MyLibraryFragment"
+        android:name="com.example.bookstore.ui.mylibrary.MyLibraryFragment"
         android:label="@string/my_library"
         tools:layout="@layout/fragment_my_library" />
 

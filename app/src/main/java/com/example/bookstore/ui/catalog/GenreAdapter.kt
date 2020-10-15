@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.bookstore.Genre
 import com.example.bookstore.R
+import com.example.bookstore.data.Genre
 
 class GenreAdapter : RecyclerView.Adapter<GenreAdapter.GenreViewHolder>() {
 

@@ -17,6 +17,9 @@
     <color name="deep_orange_300">#FF7262</color>
     <color name="deep_orange_500">#FF5722</color>
 
+    <!--Grey-->
+    <color name="grey_300">#E0E0E0</color>
+
     <!--White-->
     <color name="white">#ffffff</color>
     <color name="white_alpha_25">#40FFFFFF</color>

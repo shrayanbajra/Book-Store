@@ -1,4 +1,4 @@
-package com.example.bookstore
+package com.example.bookstore.data
 
 data class Genre(
     var imageResource: Int = 0,
