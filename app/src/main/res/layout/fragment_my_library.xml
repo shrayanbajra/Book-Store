@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.mylibrary.MyLibraryFragment">
 
+    <ImageView
+        android:id="@+id/iv_background_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/background_image_in_home"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_my_library"
+        app:layout_constraintBottom_toTopOf="@id/now_reading_mid_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tv_title_my_library"
         style="@style/textStyleH1"
@@ -18,6 +30,7 @@
         android:paddingBottom="8dp"
         android:text="@string/my_library"
         android:textColor="@color/black"
+        app:drawableEndCompat="@drawable/ic_search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -55,5 +68,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/tv_now_reading_title"
         app:layout_constraintTop_toBottomOf="@id/tv_now_reading_title" />
+
+    <View
+        android:id="@+id/now_reading_mid_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/rv_now_reading"
+        app:layout_constraintEnd_toEndOf="@id/rv_now_reading"
+        app:layout_constraintStart_toStartOf="@id/rv_now_reading"
+        app:layout_constraintTop_toTopOf="@id/rv_now_reading" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
