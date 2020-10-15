@@ -1,4 +1,4 @@
-package com.example.bookstore.ui.home
+package com.example.bookstore.data
 
 data class Book(
     var cover: Int = 0,

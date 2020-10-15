@@ -1,4 +1,4 @@
-package com.example.bookstore.ui.home
+package com.example.bookstore.ui.home.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,11 +7,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookstore.R
+import com.example.bookstore.data.Book
 import com.example.bookstore.utils.CurrencyUtils
 import com.google.android.material.chip.Chip
 
-class NewestAndTrendingBooksAdapter :
-    RecyclerView.Adapter<NewestAndTrendingBooksAdapter.NewestAndTrendingBooksViewHolder>() {
+class ComingSoonBooksAdapter :
+    RecyclerView.Adapter<ComingSoonBooksAdapter.ComingSoonBooksViewHolder>() {
 
     private val books = arrayListOf<Book>()
 
@@ -24,13 +25,13 @@ class NewestAndTrendingBooksAdapter :
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): NewestAndTrendingBooksViewHolder {
+    ): ComingSoonBooksViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_newest_and_trending_book, parent, false)
-        return NewestAndTrendingBooksViewHolder(view)
+            .inflate(R.layout.item_coming_soon_book, parent, false)
+        return ComingSoonBooksViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: NewestAndTrendingBooksViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ComingSoonBooksViewHolder, position: Int) {
 
         val currentBook = books[position]
         holder.bind(currentBook)
@@ -39,7 +40,7 @@ class NewestAndTrendingBooksAdapter :
 
     override fun getItemCount() = books.size
 
-    class NewestAndTrendingBooksViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ComingSoonBooksViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         private val ivCover: ImageView = itemView.findViewById(R.id.iv_cover)
         private val tvTitle: TextView = itemView.findViewById(R.id.tv_title)

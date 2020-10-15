@@ -8,6 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookstore.R
+import com.example.bookstore.data.Book
+import com.example.bookstore.ui.home.adapters.ComingSoonBooksAdapter
+import com.example.bookstore.ui.home.adapters.MostPopularBooksAdapter
+import com.example.bookstore.ui.home.adapters.NewestAndTrendingBooksAdapter
 
 class HomeFragment : Fragment() {
 
@@ -16,6 +20,9 @@ class HomeFragment : Fragment() {
 
     private lateinit var rvNewestAndTrendingBooks: RecyclerView
     private val newestAndTrendingBooksAdapter = NewestAndTrendingBooksAdapter()
+
+    private lateinit var rvComingSoonBooks: RecyclerView
+    private val comingSoonBooksAdapter = ComingSoonBooksAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,6 +36,7 @@ class HomeFragment : Fragment() {
 
         initRvMostPopularBooks(view)
         initRvNewestAndTrendingBooks(view)
+        initRvComingSoonBooks(view)
 
     }
 
@@ -46,6 +54,13 @@ class HomeFragment : Fragment() {
         rvNewestAndTrendingBooks.adapter = newestAndTrendingBooksAdapter
     }
 
+    private fun initRvComingSoonBooks(view: View) {
+        rvComingSoonBooks = view.findViewById(R.id.rv_coming_soon_books)
+        rvComingSoonBooks.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        rvComingSoonBooks.adapter = comingSoonBooksAdapter
+    }
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
@@ -54,6 +69,9 @@ class HomeFragment : Fragment() {
 
         val newBooks = getNewestAndTrendingBooks()
         newestAndTrendingBooksAdapter.setBooks(newBooks)
+
+        val comingSoonBooks = getNewestAndTrendingBooks()
+        comingSoonBooksAdapter.setBooks(newBooks)
 
     }
 

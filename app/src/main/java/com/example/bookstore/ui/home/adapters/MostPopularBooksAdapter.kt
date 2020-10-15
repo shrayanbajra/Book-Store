@@ -1,4 +1,4 @@
-package com.example.bookstore.ui.home
+package com.example.bookstore.ui.home.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookstore.R
+import com.example.bookstore.data.Book
 import com.example.bookstore.utils.CurrencyUtils
 import com.google.android.material.chip.Chip
 
