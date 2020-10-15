@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:minHeight="24dp"
-        android:text="75%"
+        android:text="@string/seventy_five_percent"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@id/progress_bar"
         app:layout_constraintHorizontal_bias="0.75"
