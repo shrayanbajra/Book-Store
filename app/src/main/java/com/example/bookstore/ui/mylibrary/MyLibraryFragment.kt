@@ -76,21 +76,21 @@ class MyLibraryFragment : Fragment() {
 
     private fun getNowReadingBooks(): List<Book> {
 
-        val books1 = Book(
+        val book1 = Book(
             cover = R.drawable.img_now_reading_1,
             title = getString(R.string.lolita),
             author = getString(R.string.vladimir_nabokov),
             genre = getString(R.string.novel)
         )
 
-        val books2 = Book(
+        val book2 = Book(
             cover = R.drawable.img_now_reading_2,
             title = getString(R.string.milkman),
             author = getString(R.string.anna_burns),
             genre = getString(R.string.novel)
         )
 
-        return listOf(books1, books2)
+        return listOf(book1, book2)
 
     }
 

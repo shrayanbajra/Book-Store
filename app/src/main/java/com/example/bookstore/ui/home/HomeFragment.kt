@@ -29,7 +29,6 @@ class HomeFragment : Fragment() {
     private lateinit var rvMoreArticles: RecyclerView
     private val moreArticlesAdapter = MoreArticlesAdapter()
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -180,7 +179,6 @@ class HomeFragment : Fragment() {
             image = R.drawable.img_article_1,
             title = getString(R.string.weekly_free_books)
         )
-
         val article2 = Article(
             image = R.drawable.img_article_2,
             title = getString(R.string.top_romantic_novels)
