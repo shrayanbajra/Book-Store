@@ -83,5 +83,6 @@
     <string name="invisible">Invisible</string>
     <string name="wild_swans">Wild Swans</string>
     <string name="jung_chang">Jung Chang</string>
+    <string name="background_color_of_shown_image">Background color of shown image</string>
 
 </resources>
