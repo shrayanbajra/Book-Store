@@ -63,5 +63,10 @@
     <string name="the_bridal_party">The Bridal Party</string>
     <string name="the_aftermath">The Aftermath</string>
     <string name="books_to_read">Books to read</string>
+    <string name="finished">Finished</string>
+    <string name="i_looked_away">I Looked Away</string>
+    <string name="this_is_going_to_hurt">This is going to hurt</string>
+    <string name="the_reckoning">The Reckoning</string>
+    <string name="after">After</string>
 
 </resources>

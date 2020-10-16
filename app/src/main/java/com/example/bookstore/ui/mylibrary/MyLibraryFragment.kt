@@ -18,6 +18,9 @@ class MyLibraryFragment : Fragment() {
     private lateinit var rvBooksToRead: RecyclerView
     private val rvBooksToReadAdapter = BooksToReadAdapter()
 
+    private lateinit var rvFinished: RecyclerView
+    private val rvFinishedAdapter = FinishedAdapter()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,6 +33,7 @@ class MyLibraryFragment : Fragment() {
 
         initRvNowReading(view)
         initRvBooksToRead(view)
+        initRvFinished(view)
 
     }
 
@@ -47,6 +51,13 @@ class MyLibraryFragment : Fragment() {
         rvBooksToRead.adapter = rvBooksToReadAdapter
     }
 
+    private fun initRvFinished(view: View) {
+        rvFinished = view.findViewById(R.id.rv_finished)
+        rvFinished.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        rvFinished.adapter = rvFinishedAdapter
+    }
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
@@ -55,6 +66,9 @@ class MyLibraryFragment : Fragment() {
 
         val booksToRead = getBooksToRead()
         rvBooksToReadAdapter.setBooks(booksToRead)
+
+        val finishedBooks = getFinishedBooks()
+        rvFinishedAdapter.setBooks(finishedBooks)
     }
 
     private fun getNowReadingBooks(): List<Book> {
@@ -97,6 +111,32 @@ class MyLibraryFragment : Fragment() {
         val book4 = Book(
             cover = R.drawable.img_book_to_read_4,
             title = getString(R.string.the_aftermath)
+        )
+
+        return listOf(book1, book2, book3, book4)
+
+    }
+
+    private fun getFinishedBooks(): List<Book> {
+
+        val book1 = Book(
+            cover = R.drawable.img_finished_book_1,
+            title = getString(R.string.i_looked_away)
+        )
+
+        val book2 = Book(
+            cover = R.drawable.img_finished_book_2,
+            title = getString(R.string.this_is_going_to_hurt)
+        )
+
+        val book3 = Book(
+            cover = R.drawable.img_finished_book_3,
+            title = getString(R.string.the_reckoning)
+        )
+
+        val book4 = Book(
+            cover = R.drawable.img_finished_book_4,
+            title = getString(R.string.after)
         )
 
         return listOf(book1, book2, book3, book4)
