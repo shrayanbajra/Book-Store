@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookstore.R
 import com.example.bookstore.data.Book
+import com.example.bookstore.utils.DisplayMetricsUtils
 
 class SpecificGenreBooksFragment : Fragment() {
 
@@ -40,25 +41,21 @@ class SpecificGenreBooksFragment : Fragment() {
 
     private fun initRvBooks(view: View) {
         rvBooks = view.findViewById(R.id.rv_books)
-        val spanCount = 2 // 2 columns
+        val spanCount = 2
         rvBooks.layoutManager =
             GridLayoutManager(view.context, spanCount, GridLayoutManager.VERTICAL, false)
         rvBooks.addItemDecoration(getGridSpacingItemDecoration(spanCount, view))
         rvBooks.adapter = rvBooksAdapter
     }
 
+    @Suppress("SameParameterValue")
     private fun getGridSpacingItemDecoration(
         spanCount: Int,
         view: View
     ): GridSpacingItemDecoration {
-        val spacing = getPixelValue(32f, view)
+        val spacing = DisplayMetricsUtils.getPixelValue(32f, view)
         val includeEdge = false
         return GridSpacingItemDecoration(spanCount, spacing.toInt(), includeEdge)
-    }
-
-    private fun getPixelValue(dps: Float, view: View): Float {
-        val scale = view.context.resources.displayMetrics.density
-        return (dps * scale + 0.5f)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
