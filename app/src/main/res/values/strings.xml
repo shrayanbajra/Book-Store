@@ -71,5 +71,17 @@
     <string name="you_have_no_books_on_your_wishlist">You have no books on your wishlist.</string>
     <string name="back_button">Back button</string>
     <string name="search">Search</string>
+    <string name="lisa_cohen">Lisa Cohen</string>
+    <string name="all_we_know_three_lives">All We Know: Three Lives</string>
+    <string name="hidden_figures">Hidden Figures</string>
+    <string name="margot_lee_shetterly">Margot Lee Shetterly</string>
+    <string name="the_wives_of_henry_viii">The Wives of Henry VIII</string>
+    <string name="lady_antonia_fraser">Lady Antonia Fraser</string>
+    <string name="frida">Frida</string>
+    <string name="hayden_herrera">Hayden Herrera</string>
+    <string name="stephen_l_carter">Stephen L. Carter</string>
+    <string name="invisible">Invisible</string>
+    <string name="wild_swans">Wild Swans</string>
+    <string name="jung_chang">Jung Chang</string>
 
 </resources>
