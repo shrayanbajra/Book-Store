@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookstore.R
 import com.example.bookstore.data.Genre
-import com.example.bookstore.shortToast
 
 class CatalogFragment : Fragment() {
 
@@ -20,7 +20,11 @@ class CatalogFragment : Fragment() {
         return object : GenreAdapter.GenreClickListener {
 
             override fun onClick(currentGenre: Genre) {
-                shortToast("${currentGenre.title} is selected")
+                navigateToSpecificGenreBooksFragment()
+            }
+
+            private fun navigateToSpecificGenreBooksFragment() {
+                findNavController().navigate(R.id.action_catalogFragment_to_specificGenreBooksFragment)
             }
 
         }

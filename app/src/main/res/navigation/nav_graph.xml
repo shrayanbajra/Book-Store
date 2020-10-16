@@ -9,7 +9,11 @@
         android:id="@+id/catalogFragment"
         android:name="com.example.bookstore.ui.catalog.CatalogFragment"
         android:label="@string/catalog"
-        tools:layout="@layout/fragment_catalog" />
+        tools:layout="@layout/fragment_catalog">
+        <action
+            android:id="@+id/action_catalogFragment_to_specificGenreBooksFragment"
+            app:destination="@id/specificGenreBooksFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/homeFragment"
@@ -22,5 +26,14 @@
         android:name="com.example.bookstore.ui.mylibrary.MyLibraryFragment"
         android:label="@string/my_library"
         tools:layout="@layout/fragment_my_library" />
+    <fragment
+        android:id="@+id/specificGenreBooksFragment"
+        android:name="com.example.bookstore.ui.catalog.SpecificGenreBooksFragment"
+        android:label="fragment_specific_genre_books"
+        tools:layout="@layout/fragment_specific_genre_books">
+        <argument
+            android:name="genre"
+            app:argType="string" />
+    </fragment>
 
 </navigation>
