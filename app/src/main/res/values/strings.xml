@@ -68,5 +68,7 @@
     <string name="this_is_going_to_hurt">This is going to hurt</string>
     <string name="the_reckoning">The Reckoning</string>
     <string name="after">After</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="you_have_no_books_on_your_wishlist">You have no books on your wishlist.</string>
 
 </resources>
