@@ -1,4 +1,4 @@
-package com.example.bookstore.ui.mylibrary
+package com.example.bookstore.ui.mylibrary.adapters
 
 import android.view.LayoutInflater
 import android.view.View

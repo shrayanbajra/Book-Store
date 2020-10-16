@@ -1,4 +1,4 @@
-package com.example.bookstore.ui.mylibrary
+package com.example.bookstore.ui.mylibrary.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.bookstore.R
 import com.example.bookstore.data.Book
 
-class FinishedAdapter : RecyclerView.Adapter<FinishedAdapter.FinishedBooksViewHolder>() {
+class BooksFinishedAdapter : RecyclerView.Adapter<BooksFinishedAdapter.FinishedBooksViewHolder>() {
 
     private val books = arrayListOf<Book>()
 

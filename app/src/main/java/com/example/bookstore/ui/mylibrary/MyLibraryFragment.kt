@@ -9,6 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookstore.R
 import com.example.bookstore.data.Book
+import com.example.bookstore.ui.mylibrary.adapters.BooksFinishedAdapter
+import com.example.bookstore.ui.mylibrary.adapters.BooksToReadAdapter
+import com.example.bookstore.ui.mylibrary.adapters.NowReadingAdapter
 
 class MyLibraryFragment : Fragment() {
 
@@ -19,7 +22,7 @@ class MyLibraryFragment : Fragment() {
     private val rvBooksToReadAdapter = BooksToReadAdapter()
 
     private lateinit var rvFinished: RecyclerView
-    private val rvFinishedAdapter = FinishedAdapter()
+    private val rvBooksFinishedAdapter = BooksFinishedAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -55,7 +58,7 @@ class MyLibraryFragment : Fragment() {
         rvFinished = view.findViewById(R.id.rv_finished)
         rvFinished.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        rvFinished.adapter = rvFinishedAdapter
+        rvFinished.adapter = rvBooksFinishedAdapter
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -68,7 +71,7 @@ class MyLibraryFragment : Fragment() {
         rvBooksToReadAdapter.setBooks(booksToRead)
 
         val finishedBooks = getFinishedBooks()
-        rvFinishedAdapter.setBooks(finishedBooks)
+        rvBooksFinishedAdapter.setBooks(finishedBooks)
     }
 
     private fun getNowReadingBooks(): List<Book> {
