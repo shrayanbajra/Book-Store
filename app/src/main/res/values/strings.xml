@@ -70,5 +70,6 @@
     <string name="wishlist">Wishlist</string>
     <string name="you_have_no_books_on_your_wishlist">You have no books on your wishlist.</string>
     <string name="back_button">Back button</string>
+    <string name="search">Search</string>
 
 </resources>
