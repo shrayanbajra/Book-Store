@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.catalog.SpecificGenreBooksFragment">
 
+    <ImageView
+        android:id="@+id/iv_back_button"
+        android:layout_width="24dp"
+        android:layout_height="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/back_button"
+        android:src="@drawable/ic_back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        android:id="@+id/tv_genre"
+        android:id="@+id/tv_catalog"
+        style="@style/textStyleLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginStart="8dp"
+        android:text="@string/catalog"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/iv_back_button"
+        app:layout_constraintStart_toEndOf="@id/iv_back_button"
+        app:layout_constraintTop_toTopOf="@id/iv_back_button" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tv_genre"
+        style="@style/textStyleH1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintHeight_min="42dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_catalog"
+        tools:text="@string/biography" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
