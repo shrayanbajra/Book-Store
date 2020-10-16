@@ -52,7 +52,6 @@ class BooksAdapter : RecyclerView.Adapter<BooksAdapter.BooksViewHolder>() {
 
         fun bind(currentBook: Book) {
             val dominantColor = getDominantColor(currentBook.cover)
-
             ivBackgroundImage.setColorFilter(dominantColor)
             ivCover.setImageResource(currentBook.cover)
             tvAuthor.text = currentBook.author
