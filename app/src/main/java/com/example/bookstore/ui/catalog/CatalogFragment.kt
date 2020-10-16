@@ -20,11 +20,15 @@ class CatalogFragment : Fragment() {
         return object : GenreAdapter.GenreClickListener {
 
             override fun onClick(currentGenre: Genre) {
-                navigateToSpecificGenreBooksFragment()
+                navigateToSpecificGenreBooksFragment(currentGenre.title)
             }
 
-            private fun navigateToSpecificGenreBooksFragment() {
-                findNavController().navigate(R.id.action_catalogFragment_to_specificGenreBooksFragment)
+            private fun navigateToSpecificGenreBooksFragment(title: String) {
+                val action =
+                    CatalogFragmentDirections.actionCatalogFragmentToSpecificGenreBooksFragment(
+                        genre = title
+                    )
+                findNavController().navigate(action)
             }
 
         }
