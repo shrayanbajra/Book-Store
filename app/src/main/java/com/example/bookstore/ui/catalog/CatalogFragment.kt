@@ -9,11 +9,22 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookstore.R
 import com.example.bookstore.data.Genre
+import com.example.bookstore.shortToast
 
 class CatalogFragment : Fragment() {
 
     private lateinit var rvGenres: RecyclerView
-    private val rvGenresAdapter = GenreAdapter()
+    private val rvGenresAdapter = GenreAdapter(getGenreClickListener())
+
+    private fun getGenreClickListener(): GenreAdapter.GenreClickListener {
+        return object : GenreAdapter.GenreClickListener {
+
+            override fun onClick(currentGenre: Genre) {
+                shortToast("${currentGenre.title} is selected")
+            }
+
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

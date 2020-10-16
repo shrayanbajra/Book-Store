@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.bookstore.R
 import com.example.bookstore.data.Genre
 
-class GenreAdapter : RecyclerView.Adapter<GenreAdapter.GenreViewHolder>() {
+class GenreAdapter(private val clickListener: GenreClickListener) :
+    RecyclerView.Adapter<GenreAdapter.GenreViewHolder>() {
 
     private val genres = arrayListOf<Genre>()
 
@@ -22,7 +23,7 @@ class GenreAdapter : RecyclerView.Adapter<GenreAdapter.GenreViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GenreViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_genre, parent, false)
-        return GenreViewHolder(view)
+        return GenreViewHolder(view, clickListener)
     }
 
     override fun onBindViewHolder(holder: GenreViewHolder, position: Int) {
@@ -34,7 +35,8 @@ class GenreAdapter : RecyclerView.Adapter<GenreAdapter.GenreViewHolder>() {
         return genres.size
     }
 
-    class GenreViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class GenreViewHolder(itemView: View, val clickListener: GenreClickListener) :
+        RecyclerView.ViewHolder(itemView) {
 
         private val tvGenreIcon: ImageView = itemView.findViewById(R.id.iv_genre_icon)
         private val tvGenreTitle: TextView = itemView.findViewById(R.id.tv_genre_title)
@@ -42,8 +44,13 @@ class GenreAdapter : RecyclerView.Adapter<GenreAdapter.GenreViewHolder>() {
         fun bind(currentGenre: Genre) {
             tvGenreIcon.setImageResource(currentGenre.imageResource)
             tvGenreTitle.text = currentGenre.title
+            itemView.setOnClickListener { clickListener.onClick(currentGenre) }
         }
 
+    }
+
+    interface GenreClickListener {
+        fun onClick(currentGenre: Genre)
     }
 
 }
