@@ -58,5 +58,10 @@
     <string name="anna_burns">Anna Burns</string>
     <string name="novel">Novel</string>
     <string name="seventy_five_percent">75%</string>
+    <string name="play_dead">Play Dead</string>
+    <string name="the_handmaids_tale">The Handmaid\'s Tale</string>
+    <string name="the_bridal_party">The Bridal Party</string>
+    <string name="the_aftermath">The Aftermath</string>
+    <string name="books_to_read">Books to read</string>
 
 </resources>

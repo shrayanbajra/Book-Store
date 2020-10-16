@@ -15,6 +15,9 @@ class MyLibraryFragment : Fragment() {
     private lateinit var rvNowReading: RecyclerView
     private val rvNowReadingAdapter = NowReadingAdapter()
 
+    private lateinit var rvBooksToRead: RecyclerView
+    private val rvBooksToReadAdapter = BooksToReadAdapter()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,6 +29,7 @@ class MyLibraryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initRvNowReading(view)
+        initRvBooksToRead(view)
 
     }
 
@@ -36,11 +40,21 @@ class MyLibraryFragment : Fragment() {
         rvNowReading.adapter = rvNowReadingAdapter
     }
 
+    private fun initRvBooksToRead(view: View) {
+        rvBooksToRead = view.findViewById(R.id.rv_books_to_read)
+        rvBooksToRead.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        rvBooksToRead.adapter = rvBooksToReadAdapter
+    }
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        val books = getNowReadingBooks()
-        rvNowReadingAdapter.setBooks(books)
+        val nowReadingBooks = getNowReadingBooks()
+        rvNowReadingAdapter.setBooks(nowReadingBooks)
+
+        val booksToRead = getBooksToRead()
+        rvBooksToReadAdapter.setBooks(booksToRead)
     }
 
     private fun getNowReadingBooks(): List<Book> {
@@ -60,6 +74,32 @@ class MyLibraryFragment : Fragment() {
         )
 
         return listOf(books1, books2)
+
+    }
+
+    private fun getBooksToRead(): List<Book> {
+
+        val book1 = Book(
+            cover = R.drawable.img_book_to_read_1,
+            title = getString(R.string.play_dead)
+        )
+
+        val book2 = Book(
+            cover = R.drawable.img_book_to_read_2,
+            title = getString(R.string.the_handmaids_tale)
+        )
+
+        val book3 = Book(
+            cover = R.drawable.img_book_to_read_3,
+            title = getString(R.string.the_bridal_party)
+        )
+
+        val book4 = Book(
+            cover = R.drawable.img_book_to_read_4,
+            title = getString(R.string.the_aftermath)
+        )
+
+        return listOf(book1, book2, book3, book4)
 
     }
 
