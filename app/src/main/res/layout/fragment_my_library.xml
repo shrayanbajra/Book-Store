@@ -143,7 +143,7 @@
             app:layout_constraintTop_toTopOf="@id/tv_finished_title" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_finished"
+            android:id="@+id/rv_finished_books"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -161,7 +161,7 @@
             android:text="@string/wishlist"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rv_finished" />
+            app:layout_constraintTop_toBottomOf="@id/rv_finished_books" />
 
         <TextView
             android:id="@+id/tv_wish_list_body"

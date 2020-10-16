@@ -36,7 +36,7 @@ class MyLibraryFragment : Fragment() {
 
         initRvNowReading(view)
         initRvBooksToRead(view)
-        initRvFinished(view)
+        initRvFinishedBooks(view)
 
     }
 
@@ -54,8 +54,8 @@ class MyLibraryFragment : Fragment() {
         rvBooksToRead.adapter = rvBooksToReadAdapter
     }
 
-    private fun initRvFinished(view: View) {
-        rvFinished = view.findViewById(R.id.rv_finished)
+    private fun initRvFinishedBooks(view: View) {
+        rvFinished = view.findViewById(R.id.rv_finished_books)
         rvFinished.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         rvFinished.adapter = rvBooksFinishedAdapter
