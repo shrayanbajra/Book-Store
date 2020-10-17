@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookstore.R
@@ -14,6 +16,7 @@ import com.example.bookstore.utils.DisplayMetricsUtils
 
 class SpecificGenreBooksFragment : Fragment() {
 
+    private lateinit var ivBackButton: ImageView
     private lateinit var tvGenre: TextView
 
     private lateinit var rvBooks: RecyclerView
@@ -35,17 +38,21 @@ class SpecificGenreBooksFragment : Fragment() {
         tvGenre = view.findViewById(R.id.tv_genre)
         tvGenre.text = genre
 
+        ivBackButton = view.findViewById(R.id.iv_back_button)
+
         initRvBooks(view)
 
     }
 
     private fun initRvBooks(view: View) {
         rvBooks = view.findViewById(R.id.rv_books)
-        val spanCount = 2
-        rvBooks.layoutManager =
-            GridLayoutManager(view.context, spanCount, GridLayoutManager.VERTICAL, false)
-        rvBooks.addItemDecoration(getGridSpacingItemDecoration(spanCount, view))
-        rvBooks.adapter = rvBooksAdapter
+        rvBooks.apply {
+            val spanCount = 2
+            addItemDecoration(getGridSpacingItemDecoration(spanCount, view))
+            adapter = rvBooksAdapter
+            layoutManager =
+                GridLayoutManager(view.context, spanCount, GridLayoutManager.VERTICAL, false)
+        }
     }
 
     @Suppress("SameParameterValue")
@@ -63,6 +70,8 @@ class SpecificGenreBooksFragment : Fragment() {
 
         val books = getBooks()
         rvBooksAdapter.setBooks(books)
+
+        ivBackButton.setOnClickListener { navigateUp() }
     }
 
     private fun getBooks(): List<Book> {
@@ -108,6 +117,10 @@ class SpecificGenreBooksFragment : Fragment() {
             price = 13.30
         )
         return listOf(book1, book2, book3, book4, book5, book6)
+    }
+
+    private fun navigateUp() {
+        findNavController().navigateUp()
     }
 
 }
