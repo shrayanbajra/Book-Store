@@ -32,16 +32,14 @@ class SpecificGenreBooksFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val args = arguments?.let { SpecificGenreBooksFragmentArgs.fromBundle(it) }
-        val genre = args?.genre ?: ""
-
-        tvGenre = view.findViewById(R.id.tv_genre)
-        tvGenre.text = genre
-
-        ivBackButton = view.findViewById(R.id.iv_back_button)
-
+        initViews(view)
         initRvBooks(view)
 
+    }
+
+    private fun initViews(view: View) {
+        tvGenre = view.findViewById(R.id.tv_genre)
+        ivBackButton = view.findViewById(R.id.iv_back_button)
     }
 
     private fun initRvBooks(view: View) {
@@ -50,8 +48,9 @@ class SpecificGenreBooksFragment : Fragment() {
             val spanCount = 2
             addItemDecoration(getGridSpacingItemDecoration(spanCount, view))
             adapter = rvBooksAdapter
-            layoutManager =
-                GridLayoutManager(view.context, spanCount, GridLayoutManager.VERTICAL, false)
+            layoutManager = GridLayoutManager(
+                view.context, spanCount, GridLayoutManager.VERTICAL, false
+            )
         }
     }
 
@@ -67,6 +66,10 @@ class SpecificGenreBooksFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        val args = arguments?.let { SpecificGenreBooksFragmentArgs.fromBundle(it) }
+        val genre = args?.genre ?: ""
+        tvGenre.text = genre
 
         val books = getBooks()
         rvBooksAdapter.setBooks(books)
